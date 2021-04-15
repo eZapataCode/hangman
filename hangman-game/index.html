@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Hangman</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="wrapper__hint"></header>
+        <div class="image-container">
+            <img src="img/hang0.png" class="image-container__hangman">
+        </div>
+        <div class="word-container"></div>
+        <form class="form">
+            <input type="text" autocomplete="off" maxlength="1" name="letterInput" class="form__letter" id="letter-input">
+            <input type="submit" class="form__submit" id="submit-input" value="SEND">
+        </form>
+    </div>
+    <div class="pop-container" id="start-popup">
+        <div class="pop-box">
+            <h1 class="pop-box__title">
+                <span class="pop-box__letter">H</span>
+                <span class="pop-box__letter">A</span>
+                <span class="pop-box__letter">N</span>
+                <span class="pop-box__letter">G</span>
+                <span class="pop-box__letter">M</span>
+                <span class="pop-box__letter">A</span>
+                <span class="pop-box__letter">N</span>
+            </h1>
+            <button class="pop-box__btn" id="start-btn">START</button>
+        </div>
+    </div>
+    <div class="pop-container hide-popup" id="win-popup">
+        <div class="pop-box">
+            <h1 class="pop-box__title">YOU WIN</h1>
+            <button class="pop-box__btn" id="tryagain-btn">TRY AGAIN</button>
+        </div>
+    </div>
+    <div class="pop-container hide-popup" id="gameover-popup">
+        <div class="pop-box">
+            <h1 class="pop-box__title">GAME OVER</h1>
+            <button class="pop-box__btn" id="tryagain-btn">TRY AGAIN</button>
+        </div>
+    </div>
+    <audio id="background-audio" loop src="sound/forest_myths.mp3"></audio>
+    <audio id="neck-break" src="sound/bone_break.mp3"></audio>
+    <audio id="scream" src="sound/scream.mp3"></audio>
+
+    <script type="text/javascript" src="gsap/gsap.min.js"></script>
+    <script type="text/javascript" src="script/vars.js"></script>
+    <script type="text/javascript" src="script/words.js"></script>
+    <script type="text/javascript" src="script/animations.js"></script>
+    <script type="text/javascript" src="script/functions.js"></script>
+    <script type="text/javascript" src="script/listeners.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+.wrapper {
+    @include flex-distribution(space-between, center, column);
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    &__hint {
+        @include flex-distribution(center, center);
+        height: 5rem;
+        background: linear-gradient(to top, #566cd8d8, #566cd8de);
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+        text-transform: uppercase;
+        transform: translateY(-6rem);
+    }
+}
+
+.word-container {
+    @include flex-distribution(center, center);
+    margin: 2rem;
+    pointer-events: none;
+
+    &__block {
+        margin-right: 1rem;
+        min-width: 3rem;
+        background: linear-gradient(to bottom, transparent 50%, #f2d662 115%);
+    }
+
+    &__letter {
+        text-transform: uppercase;
+        font-size: 26px;
+        padding: 0.5rem;
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+.form {
+    @include flex-distribution(center, center, column);
+    transform: translateY(12rem);
+
+    &__letter {
+        margin: 1rem 0 2rem 0;
+        width: 5rem;
+        height: 5rem;
+        font-size: 32px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__submit {
+        width: 7rem;
+        height: 3rem;
+    }
+}
+
+.hide-popup {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.show-letter {
+    opacity: 1;
+}

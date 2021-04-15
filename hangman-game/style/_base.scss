@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    border: 2px solid black;
+    padding: 0 2rem;
+    text-align: center;
+    font-family: sans-serif;
+    background-image: url('../img/background.jpg');
+}
+
+
+@mixin flex-distribution($justify, $align, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
